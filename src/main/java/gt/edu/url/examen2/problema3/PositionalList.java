@@ -14,6 +14,13 @@ public interface PositionalList<E> {
 	E set(Position<E> p, E e) throws IllegalArgumentException;
 	E remove(Position<E> p) throws IllegalArgumentException;
         //Metodo a implementar
-        void swap(Position<E> p, Position<E> q);
+        void swap(Position<E> var2, Position<E> var4) {
+        	Node<E> var1 = validate(var2); 
+    		Node<E> var3 = validate(var4); 
+    		E x = var1.getElement(); 
+    		E y = var3.getElement();
+    		P.setElement(x);
+    		Q.setElement(y);
+        }
 
 }
